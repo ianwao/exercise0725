@@ -1,0 +1,32 @@
+
+pojo   get set  无参构造
+
+Application  IOC
+ClassPathXml      /resoure
+FileSystem    /
+
+bean 标签  => bean 注解  value   等同于  id
+ id     name
+class   类型
+快速bean ioc
+懒加载  lazy-init
+
+类的声明周期
+initMethod  destroyMethod
+
+
+@Configuration   作用   在  IOC 初始化完成之前 进行一些自己的操作
+
+@Controller  @Service   @Repostry   @Compoent 组件
+按功能区分
+他们几个的作用是一样的 , 为了让程序员好区分
+
+   @Autowired    required  true  false   按类型
+
+   @Reourse     按名字
+
+
+<context:component-scan base-package="com.taji.learn"/>   一切注解生效的前提
+@ComponentScan 
+
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/user/login}" action="/user/login" method="post" >
+    <p th:text="#{login.tip}"></p>
+    username:<input type="text" name="username" th:placeholder="#{login.username}" />
+    <!--<span  style="color: red" th:errors="*{login.username}"></span>-->
+    <br></br>
+    password:<input type="password" name="password" th:placeholder="#{login.password}"/>
+    <!--<span  style="color: red" th:errors="*{login.password}"></span>-->
+    <br></br>
+    <input type="submit"/>
+</form>
+</body>
+</html>
