@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    注册
+    <form action="register" th:object="${user}" method="post">
+        用户名：<input name="username" type="text"/>
+        <span style="color: red" th:errors="*{username}"></span><br/>
+        密码：<input name="password" type="text"/>
+        <span style="color: red" th:errors="*{password}"></span><br/>
+        年龄：<input name="age" type="text"/>
+        <span style="color: red" th:errors="*{age}"></span><br/>
+        邮箱：<input name="email" type="text"/>
+        <span style="color: red" th:errors="*{email}"></span><br/>
+        地区：<input name="address.addressname" type="text"/><br/>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>

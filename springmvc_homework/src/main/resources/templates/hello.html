@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form th:action="hello01">
+    <label for="username01" th:text="#{login.name}"></label>:
+    <input id="username01" type="text" name="username"/>
+    <input type="submit" value="形参传参"/>
+</form>
+<br/>
+
+<form action="hello02">
+    <label for="password02" th:text="#{login.password}"></label>:
+    <input id="password02" type="text" name="password"/>
+    <input type="submit" value="RequestParam注解绑定传参"/>
+</form>
+<br/>
+
+<form action="hello03">
+    <label for="username" th:text="#{login.name}"></label>:
+    <input id="username" type="text" name="username"/>
+    <label for="password" th:text="#{login.password}"></label>:
+    <input id="password" type="text" name="password"/>
+    <label for="age" th:text="#{login.age}"></label>:
+    <input id="age" type="text" name="age"/>
+    <label for="email" th:text="#{login.email}"></label>:
+    <input id="email" type="text" name="email"/>
+    <input type="submit" value="pojo接收参数"/>
+</form>
+<br/>
+
+<form action="hello04">
+    <input type="submit" value="url接收参数"/>
+</form>
+<br/>
+
+<form action="hello05">
+    <label for="username05" th:text="#{login.name}"></label>：
+    <input id="username05" type="text" name="username"/>
+    <input type="submit" value="原生request方式接收参数"/>
+</form>
+
+
+<br/>
+<a th:href="@{/hello01(l='zh_CN')}">中文</a>
+<a th:href="@{/hello01(l='en_US')}">English</a>
+</body>
+</html>
