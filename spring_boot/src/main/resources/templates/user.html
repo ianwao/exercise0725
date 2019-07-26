@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div th:each="user:${user}">
+    姓名：<input type="text" th:value="${user.name}"/><br/>
+    年龄：<input type="text" th:value="${user.age}"/>
+    性别：<input type="text" th:value="${user.sex}"/><br/>
+    电话：<input type="text" th:value="${user.mobile}"/>
+    邮箱：<input type="text" th:value="${user.email}"/>
+</div>
+</body>
+</html>

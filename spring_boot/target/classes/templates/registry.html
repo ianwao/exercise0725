@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/validator/join}" th:object="${user}" method="get">
+    <div>
+        姓名：<input type="text" th:field="*{name}"/>
+        <span style="color:red" th:errors="*{name}"></span>
+    </div>
+    <div>
+        年龄：<input type="text" th:field="*{age}"/>
+        <span style="color:red" th:errors="*{age}"></span>
+    </div>
+    <div>
+        性别：<input type="text" th:field="*{sex}"/>
+        <span style="color:red" th:errors="*{sex}"></span>
+    </div>
+    <div>
+        电话：<input type="text" th:field="*{mobile}"/>
+        <span style="color:red" th:errors="*{mobile}"></span>
+    </div>
+    <div>
+        邮箱：<input type="text" th:field="*{email}"/>
+        <span style="color:red" th:errors="*{email}"></span>
+    </div>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>

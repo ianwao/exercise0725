@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+你好！
+</body>
+<script type="application/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var data={"name":"XiaoHua", "age":18, "sex":"女", "mobile":"15243", "email":"XiaoHua@qq.com"};
+        $.ajax({
+            url:"/object",
+            type:"post",
+            data:data,
+            contentType:"application/json;charset=utf-8",
+            dataType:"json",
+            success:function(rs){
+                console.info(rs);
+            },error:function(ex){
+                console.info(ex);
+            }
+        })
+    })
+</script>
+</html>
